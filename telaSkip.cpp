@@ -11,8 +11,7 @@ telaSkip::telaSkip(wxWindow* parent, map<wxString, int> containerJogadores, film
 
 	wxArrayString escolhasFilme;
 	escolhasFilme.Add("Skipar");
-	escolhasFilme.Add("Já Viu");
-	escolhasFilme.Add("Ordem 66");
+	escolhasFilme.Add("Inciso 10");
 	escolhasFilme.Add("Ninguem Skipou");
 
 	wxArrayString jogadores;
@@ -83,13 +82,7 @@ void telaSkip::continuarSkip(wxCommandEvent& evt) {
 
 	}
 
-	if (escolhaSelecionada == "Já Viu") {
-
-		((MainFrame*)GetParent())->Skipado();
-
-	}
-
-	if (escolhaSelecionada == "Ordem 66") {
+	if (escolhaSelecionada == "Inciso 10") {
 
 		((MainFrame*)GetParent())->Skipado();
 
