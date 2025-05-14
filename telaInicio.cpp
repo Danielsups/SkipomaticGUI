@@ -19,7 +19,7 @@ telaInicio::telaInicio(wxWindow* parent) : wxPanel(parent) {
 	textoJogadores->SetFont(fonte);
 	textoJogadores->SetForegroundColour(*wxWHITE);
 
-	getNumSkips = new wxSpinCtrl(this, wxID_ANY, "", wxPoint(680, 540), wxSize(40, -1));
+	getNumSkips = new wxSpinCtrl(this, wxID_ANY, "3", wxPoint(680, 540), wxSize(40, -1));
 	wxStaticText* textoSkips = new wxStaticText(this, wxID_ANY, "Quantidade de Skips", wxPoint(730, 540), wxSize(-1, 23));
 	textoSkips->SetFont(fonte);
 	textoSkips->SetForegroundColour(*wxWHITE);
@@ -30,5 +30,14 @@ telaInicio::telaInicio(wxWindow* parent) : wxPanel(parent) {
 }
 
 void telaInicio::botaoJogadores(wxCommandEvent& evt) {
+	if (getNumJogadores->GetValue() == 0) {
+		wxMessageBox("Quantidade de Jogadores insuficiente.", "Aviso", wxOK | wxICON_INFORMATION);
+		return;
+	}
+	if (getNumSkips->GetValue() == 0) {
+		wxMessageBox("Quantidade de Skips insuficiente.", "Aviso", wxOK | wxICON_INFORMATION);
+		return;
+	}
+
 	((MainFrame*)GetParent())->TransicionarInicioJogadores();
 }
