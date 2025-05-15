@@ -3,7 +3,7 @@
 
 //Função MainFrame, cria variavel inicio e atribui a ela a tela de inicio em telaInicio.cpp, após criada a mesma já aparece na tela.
 
-MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title) {
+MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)) {
 
     inicio = new telaInicio(this);
 
