@@ -86,7 +86,7 @@ Atualmente o programa ainda não oferece suporte automatico para escolha do memb
 
 ## Adições a serem trabalhadas
 
-- [ ] Adição da duração do filme a tela de skip
+- [X] Adição da duração do filme a tela de skip
 - [ ] Analise para reorganização do codigo
 - [ ] Retrabalho do design das telas
 - [ ] Botão de retorno da tela jogadores para a tela inicial

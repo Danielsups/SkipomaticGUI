@@ -6,7 +6,7 @@ telaSkip::telaSkip(wxWindow* parent, map<wxString, int> containerJogadores, film
 	SetSize(1600, 800);
 	SetBackgroundColour(wxColour(20, 24, 28));
 
-	wxFont fonteNomeFilme(30, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
+	wxFont fonteNomeFilme(25, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
 	wxFont fonteSinopseFilme(18, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
 
 	wxArrayString escolhasFilme;
@@ -26,15 +26,19 @@ telaSkip::telaSkip(wxWindow* parent, map<wxString, int> containerJogadores, film
 	nomeFilme->SetFont(fonteNomeFilme);
 	nomeFilme->Wrap(975);
 
-	wxStaticText* notaFilme = new wxStaticText(this, wxID_ANY, containerFilme.getNota(), wxPoint(525, 210), wxSize(150, 50));
+	wxStaticText* notaFilme = new wxStaticText(this, wxID_ANY, containerFilme.getNota(), wxPoint(525, 210), wxSize(75, 50));
 	notaFilme->SetForegroundColour(*wxWHITE);
 	notaFilme->SetFont(fonteNomeFilme);
 
-	wxStaticText* anoFilme = new wxStaticText(this, wxID_ANY, containerFilme.getAno(), wxPoint(700, 210), wxSize(150, 50));
+	wxStaticText* tempoFilme = new wxStaticText(this, wxID_ANY, containerFilme.getDuracao(), wxPoint(625, 210), wxSize(75, 50));
+	tempoFilme->SetForegroundColour(*wxWHITE);
+	tempoFilme->SetFont(fonteNomeFilme);
+
+	wxStaticText* anoFilme = new wxStaticText(this, wxID_ANY, containerFilme.getAno(), wxPoint(725, 210), wxSize(75, 50));
 	anoFilme->SetForegroundColour(*wxWHITE);
 	anoFilme->SetFont(fonteNomeFilme);
 
-	wxStaticText* diretorFilme = new wxStaticText(this, wxID_ANY, containerFilme.getDiretor(), wxPoint(875, 210), wxSize(-1, 50));
+	wxStaticText* diretorFilme = new wxStaticText(this, wxID_ANY, containerFilme.getDiretor(), wxPoint(825, 210), wxSize(-1, 50));
 	diretorFilme->SetForegroundColour(*wxWHITE);
 	diretorFilme->SetFont(fonteNomeFilme);
 
